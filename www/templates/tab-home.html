@@ -1,0 +1,24 @@
+<ion-view view-title="Current Weather">
+    <ion-content class="has-header">
+
+        <form>
+
+            <div class="row" ng-show="showResult()">
+                <!--Latitude: {{lat}} <br />
+               Longitude: {{lng}} <br />
+               Accuracy: {{accuracy}} <br>-->
+                <h1>   {{ date | date : "fullDate" }} </h1>
+            </div>
+            <div class="row" ng-show="!showResult()">
+                Error : {{error}} Error Code: {{error.code}}
+            </div>
+        </form>
+        <h1>Weather Information</h1>
+        <p>City Name: {{data.name}}</p>
+        <p>Current Temperature: {{data.main.temp}}</p>
+        <p>Mininum Temperature: {{data.main.temp_min}}</p>
+        <p>Maximum Temperature: {{data.main.temp_max}}</p>
+    </ion-content>
+</ion-view>
+
+
